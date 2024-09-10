@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo de Entrega</title>
+</head>
+<body>
+    <h2>Destino Entrega</h2>
+    <form id="formularioEntrega">
+        <label for="cepOrigem">CEP Origem:</label>
+        <input type="text" id="cepOrigem" name="cepOrigem" required><br><br>
+        <br>
+        <!--Rua vai receber valor da integração com o VIACEP, definido como campo readonly-->
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua" readonly><br><br>
+        <br>
+        <!--Cidade vai receber valor da integração com o VIACEP, definido como campo readonly-->
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" readonly><br><br>
+        <br>
+        <!--Estado vai receber valor da integração com o VIACEP, definido como campo readonly -->
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" readonly><br><br>
+        <br>
+        <!--Aqui apresentará as opções de filiais lida na da variável filialDestinoSelect do entrega.js-->
+        <label for="filialDestino">Filial Destino:</label>
+        <select id="filialDestino" name="filialDestino" required></select><br><br>
+        <br>
+        <label for="responsavelFilial">Responsável Almoxarifado:</label>
+        <select id="responsavelFilial" name="responsavelFilial" required></select><br><br>
+        <br>
+        <label for="prazoEntrega">Prazo da Entrega:</label>
+        <input type="date" id="prazoEntrega" name="prazoEntrega" required><br><br>
+        <br>
+
+        <label for="descricaoMercadoria">Descrição da Mercadoria:</label>
+        <input type="text" id="descricaoMercadoria" name="descricaoMercadoria" required><br><br>
+        <br>
+        <button type="submit">Confirmar Entrega</button>
+    </form>
+    <button onclick="javascript:history.go(-1)">Voltar</button>
+    <script src="entrega.js"></script>
+</body>
+</html>
